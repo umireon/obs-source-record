@@ -9,6 +9,8 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/version.h.in ${CMAKE_CURRENT_SOURCE_D
 if(MSVC)
 	set(source-record_PLATFORM_DEPS
 		w32-pthreads)
+else()
+	add_compile_options(-O3)
 endif()
 
 set(source-record_HEADERS
